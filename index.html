@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HMDT - Himpunan Mahasiswa D3 Teknologi Telekomunikasi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --hmdt-orange: #b56d00;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+  </style>
+  <!-- AOS Styles -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body class="overflow-x-hidden opacity-100 translate-y-0 scale-100 font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <header id="navbar" class="bg-white shadow border-b border-gray-200 sticky top-0 z-50 transition-transform duration-500 ease-in-out">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <img src="img/logo-hmdt.png" alt="Logo HMDT" class="w-12 h-12 rounded-full object-cover" />
+        <div class="flex flex-col leading-tight">
+          <span class="text-xl font-bold text-[var(--hmdt-orange)]">HMDT</span>
+          <p class="text-sm text-gray-600 -mt-1">D3 Teknik Telekomunikasi</p>
+        </div>
+      </div>
+
+      <!-- Hamburger + Close Button -->
+      <button id="menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center relative z-50">
+        <!-- Icon Hamburger -->
+        <svg id="icon-open" class="absolute w-7 h-7 text-[var(--hmdt-orange)] transition-opacity duration-300 ease-in-out opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+
+        <!-- Icon Close -->
+        <svg id="icon-close" class="absolute w-7 h-7 text-[var(--hmdt-orange)] transition-opacity duration-300 ease-in-out opacity-0 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Menu Links -->
+      <nav id="menu"
+        class="fixed top-0 right-0 h-full w-2/3 sm:w-1/3 bg-white/95 backdrop-blur-sm shadow-lg transform translate-x-full opacity-0 pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] md:static md:translate-x-0 md:opacity-100 md:pointer-events-auto md:flex md:space-x-6 md:w-auto md:bg-transparent md:shadow-none">
+        <div class="flex flex-col mt-20 md:mt-0 md:flex-row md:items-center">
+          <a href="#tentang" class="block px-6 py-3 hover:text-[var(--hmdt-orange)] text-gray-800">Tentang</a>
+          <a href="#pengurus" class="block px-6 py-3 hover:text-[var(--hmdt-orange)] text-gray-800">Pengurus</a>
+          <a href="#pesan" class="block px-6 py-3 hover:text-[var(--hmdt-orange)] text-gray-800">Kesan & Pesan</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Script Toggle -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    let isOpen = false;
+
+    btn.addEventListener('click', () => {
+      isOpen = !isOpen;
+
+      if (isOpen) {
+        menu.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+        menu.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
+
+        // Smooth fade transition between icons
+        iconOpen.classList.remove('opacity-100');
+        iconOpen.classList.add('opacity-0', 'pointer-events-none');
+
+        iconClose.classList.remove('opacity-0', 'pointer-events-none');
+        iconClose.classList.add('opacity-100');
+      } else {
+        menu.classList.remove('translate-x-0', 'opacity-100', 'pointer-events-auto');
+        menu.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
+
+        iconOpen.classList.remove('opacity-0', 'pointer-events-none');
+        iconOpen.classList.add('opacity-100');
+
+        iconClose.classList.remove('opacity-100');
+        iconClose.classList.add('opacity-0', 'pointer-events-none');
+      }
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section data-aos="zoom-out" data-aos-delay="0" class="relative bg-cover bg-center bg-no-repeat text-white text-center py-24" style="background-image: url(img/rektorat1.png);">
+    <div class="absolute inset-0 bg-black/70 z-0"></div>
+    <div class="relative z-10 container mx-auto px-6">
+      <div class="grid md:grid-cols-2 items-center gap-8">
+
+        <!-- Teks -->
+        <div class="text-left space-y-6">
+          <h2 class="text-2xl md:text-4xl font-bold mb-16 leading-relaxed">
+            Selamat Datang di Himpunan Mahasiswa Diploma Teknik Telekomunikasi
+          </h2>
+          <p class="text-lg">
+            Himpunan Mahasiswa Diploma Teknik Telekomunikasi atau bisa disingkat HMDT, merupakan sebuah Himpunan yang berada di prodi Teknik Telekomunikasi yang berada di Fakultas Ilmu Terapan
+          </p>
+        </div>
+
+
+        <!-- Foto -->
+        <div class="flex justify-center md:justify-end">
+          <img src="img/rektorat1.png" alt="Foto" class="w-full max-w-xs sm:max-w-md h-auto md:h-[380px] rounded-xl shadow-lg object-cover border-white/50">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Profile -->
+  <section data-aos="zoom-in" class="py-16 px-4 md:px-20">
+    <h3 class="text-2xl font-bold text-center mb-8 text-[var(--hmdt-orange)]">Video Profile</h3>
+
+    <!-- Video Box -->
+    <div class="max-w-3xl mx-auto mb-10 rounded-lg overflow-hidden shadow-lg">
+      <div class="aspect-video">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/WpS9RMCMn5U?si=V59sjrr8UhlQc2ku" title="Profil HMDT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+      </div>
+    </div>
+    <p class="text-center max-w-2xl text-base leading-realaxed mx-auto">
+      HMDT adalah wadah pengembangan minat dan potensi mahasiswa D3 Teknologi Telekomunikasi. Kami bergerak dalam bidang akademik, sosial, dan teknologi dengan semangat kekeluargaan.
+    </p>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" data-aos="fade-left" data-aos-delay="200" class="py-16 px-4 md:px-20">
+    <h3 class="text-2xl font-bold text-center mb-8 text-[var(--hmdt-orange)]">Tentang Kami</h3>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p class="text-center max-w-3xl mx-auto">
+      HMDT adalah wadah pengembangan minat dan potensi mahasiswa D3 Teknologi Telekomunikasi. Kami bergerak dalam bidang akademik, sosial, dan teknologi dengan semangat kekeluargaan.
+    </p>
+  </section>
+
+  <!-- Struktur Pengurus -->
+  <section id="pengurus" data-aos="fade-right" data-aos-delay="200" class="py-16 px-4 bg-gray-100">
+    <h3 class="text-2xl font-bold text-center mb-10 text-[var(--hmdt-orange)]">Struktur Pengurus</h3>
+    <div class="swiper-container max-w-6xl mx-auto px-6 pb-12 relative">
+      <div class="swiper-wrapper mt-8">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide flex justify-center flex-wrap gap-6">
+          <div class="text-center w-1/2 sm:w-1/3 md:w-1/4">
+            <div class="w-24 h-24 bg-gray-300 mx-auto rounded-full mb-2"></div>
+            <p class="font-semibold">Reihan Dwi Pangestu</p>
+            <p class="text-sm">Ketua</p>
+          </div>
+          <div class="text-center w-1/2 sm:w-1/3 md:w-1/4">
+            <div class="w-24 h-24 bg-gray-300 mx-auto rounded-full mb-2"></div>
+            <p class="font-semibold">Reihan Dwi Pangestu</p>
+            <p class="text-sm">Ketua</p>
+          </div>
+          <div class="text-center w-1/2 sm:w-1/3 md:w-1/4">
+            <div class="w-24 h-24 bg-gray-300 mx-auto rounded-full mb-2"></div>
+            <p class="font-semibold">Reihan Dwi Pangestu</p>
+            <p class="text-sm">Ketua</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide flex justify-center flex-wrap gap-6">
+          <div class="text-center w-1/2 sm:w-1/3 md:w-1/4">
+            <div class="w-24 h-24 bg-gray-300 mx-auto rounded-full mb-2"></div>
+            <p class="font-semibold">Reihan Dwi Pangestu</p>
+            <p class="text-sm">Ketua</p>
+          </div>
+          <div class="text-center w-1/2 sm:w-1/3 md:w-1/4">
+            <div class="w-24 h-24 bg-gray-300 mx-auto rounded-full mb-2"></div>
+            <p class="font-semibold">Reihan Dwi Pangestu</p>
+            <p class="text-sm">Ketua</p>
+          </div>
+          <div class="text-center w-1/2 sm:w-1/3 md:w-1/4">
+            <div class="w-24 h-24 bg-gray-300 mx-auto rounded-full mb-2"></div>
+            <p class="font-semibold">Reihan Dwi Pangestu</p>
+            <p class="text-sm">Ketua</p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- Tombol navigasi -->
+      <div class="swiper-button-prev text-[var(--hmdt-orange)] text-3xl z-10 absolute left-0 top-1/2 -translate-y-1/2"></div>
+      <div class="swiper-button-next text-[var(--hmdt-orange)] text-3xl z-10 absolute right-0 top-1/2 -translate-y-1/2"></div>
+      <div class="swiper-pagination mt-6"></div>
+
+    </div>
+  </section>
+
+  <!-- Kesan & Pesan -->
+  <section id="pesan" data-aos="fade-up" data-aos-delay="200" class="py-16 px-4 md:px-20">
+    <h3 class="text-2xl font-bold text-center mb-8 text-[var(--hmdt-orange)]">Kesan & Pesan</h3>
+    <form action="https://docs.google.com/forms/d/e/PASTE_LINK_KAMU/formResponse" method="POST" target="_blank" class="max-w-xl mx-auto space-y-4">
+      <input type="text" name="entry.1234567890" required placeholder="Nama" class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[var(--hmdt-orange)]">
+      <textarea name="entry.0987654321" required placeholder="Pesan kamu..." rows="5" class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[var(--hmdt-orange)]"></textarea>
+      <button type="submit" class="bg-[var(--hmdt-orange)] text-white px-6 py-2 rounded hover:bg-opacity-90">Kirim</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center text-sm py-4">
+    © 2025 HMDT. All rights reserved.
+  </footer>
+
+
+
+  <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // Durasi animasi (ms)
+        once: true     // Hanya animasi sekali (pas pertama scroll)
+      });
+    </script>
+  <!-- end AOS Script -->
+
+  <!-- Navbar Script -->
+    <script>
+      let lastScrollY = window.scrollY;
+      const navbar = document.getElementById('navbar');
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && currentScrollY > 80) {
+          // Scroll ke bawah → sembunyiin navbar
+          navbar.style.transform = 'translateY(-100%)';
+        } else {
+          // Scroll ke atas → munculin navbar
+          navbar.style.transform = 'translateY(0)';
+        }
+
+        lastScrollY = currentScrollY;
+      });
+    </script>
+  <!-- end Navbar Script -->
+  
+  <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper-container', {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        loop: false,
+        spaceBetween: 20,
+        slidesPerView: 1,
+      });
+
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          swiper.update();
+        }, 300);
+      });
+    </script>
+  <!-- end Swiper JS -->
+</body>
+</html>
