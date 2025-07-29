@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HMDT - Himpunan Mahasiswa D3 Teknologi Telekomunikasi</title>
   <link rel="icon" type="image/x-icon" href="img/logo-hmdt.png">
+  <link rel="stylesheet" href="style.css">
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -24,130 +25,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --hmdt-orange: #b56d00;
-      --hmdt-orange-light: #d88a1e;
-      --hmdt-dark: #1e293b;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      background-color: #f8fafc;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-    }
-
-    #navbar {
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .section-title {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 2.5rem;
-    }
-    
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 70px;
-      height: 4px;
-      background: var(--hmdt-orange);
-      border-radius: 2px;
-    }
-
-    .btn-primary {
-      background: var(--hmdt-orange);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      display: inline-block;
-      box-shadow: 0 4px 6px rgba(181, 109, 0, 0.2);
-    }
-
-    .btn-primary:hover {
-      background: var(--hmdt-orange-light);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(181, 109, 0, 0.3);
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    .overlay-gradient {
-      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
-    }
-
-    .swiper-button-prev, .swiper-button-next {
-      background: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .swiper-button-prev::after, .swiper-button-next::after {
-      font-size: 18px;
-      color: var(--hmdt-orange);
-    }
-
-    .form-input {
-      width: 100%;
-      padding: 0.875rem 1rem;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      background: #f8fafc;
-    }
-
-    .form-input:focus {
-      outline: none;
-      border-color: var(--hmdt-orange);
-      box-shadow: 0 0 0 3px rgba(181, 109, 0, 0.1);
-    }
-
-    .social-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: var(--hmdt-orange);
-      color: white;
-      border-radius: 50%;
-      transition: all 0.3s ease;
-    }
-
-    .social-icon:hover {
-      background: var(--hmdt-orange-light);
-      transform: translateY(-3px);
-    }
-  </style>
   <!-- AOS Styles -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Swiper CSS -->
@@ -198,7 +75,7 @@
             <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--hmdt-orange)] transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a href="#pengurus" class="font-semibold relative group transition duration-200 text-gray-800 hover:text-[var(--hmdt-orange)]">
-            Pengurus
+            BPH
             <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--hmdt-orange)] transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a href="#aspirasi" class="font-semibold relative group transition duration-200 text-gray-800 hover:text-[var(--hmdt-orange)] ">
@@ -217,7 +94,7 @@
         <a href="#home" class="block py-3 px-4 rounded hover:bg-gray-100 text-gray-800 transition font-medium">Home</a>
         <a href="#about" class="block py-3 px-4 rounded hover:bg-gray-100 text-gray-800 transition font-medium">Tentang</a>
         <a href="#visi-misi" class="block py-3 px-4 rounded hover:bg-gray-100 text-gray-800 transition font-medium">Visi & Misi</a>
-        <a href="#pengurus" class="block py-3 px-4 rounded hover:bg-gray-100 text-gray-800 transition font-medium">Pengurus</a>
+        <a href="#pengurus" class="block py-3 px-4 rounded hover:bg-gray-100 text-gray-800 transition font-medium">BPH</a>
         <a href="#aspirasi" class="block py-3 px-4 rounded hover:bg-gray-100 text-gray-800 transition font-medium">Aspirasi</a>
         <a href="#kontak" class="block py-3 px-4 rounded hover:bg-gray-100 text-gray-800 transition font-medium">Kontak</a>
       </div>
@@ -237,7 +114,7 @@
             Himpunan Mahasiswa <br> <span class="text-[var(--hmdt-orange)]">D3 Teknologi Telekomunikasi</span>
           </h1>
           <p data-aos="fade-up" data-aos-delay="200" class="text-lg max-w-lg text-gray-200 leading-relaxed">
-            Organisasi dan pengembangan minat mahasiswa D3 Teknologi Telekomunikasi di Telkom University untuk mewujudkan mahasiswa yang berkarakter, kompeten, dan berdaya saing profesional.
+            Organisasi, suara mahasiswa, dan pengembangan minat mahasiswa D3 Teknologi Telekomunikasi di Telkom University untuk mewujudkan mahasiswa yang berkarakter, kompeten, dan berdaya saing profesional.
           </p>
           <div data-aos="fade-up" data-aos-delay="300" class="flex flex-wrap gap-4 mt-6">
             <a href="#about" class="btn-primary">
@@ -301,7 +178,7 @@
                 <i class="fas fa-calendar-alt fa-lg"></i>
               </div>
               <div>
-                <p class="text-2xl font-bold">15+</p>
+                <p class="text-2xl font-bold">10+</p>
                 <p class="text-gray-600">Kegiatan/Tahun</p>
               </div>
             </div>
@@ -475,7 +352,7 @@
       <!-- Tombol Lihat Detail -->
       <div class="mt-10 text-center">
         <a href="bph.html" class="btn-primary inline-flex items-center">
-          Lihat Departemen
+          Lihat selengkapnya
           <i class="fas fa-arrow-right ml-2"></i>
         </a>
       </div>
@@ -624,82 +501,6 @@
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   
-  <script>
-    // Inisialisasi AOS
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100
-    });
-
-    // Preloader
-    window.addEventListener('load', function() {
-      const preloader = document.getElementById('preloader');
-      setTimeout(() => {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 500);
-      }, 800);
-    });
-
-    // Navbar Mobile Toggle
-    const toggleBtn = document.getElementById('toggleMenu');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const navbar = document.getElementById('navbar');
-
-    toggleBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Navbar Hide on Scroll
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        navbar.style.transform = 'translateY(-100%)';
-      } else {
-        navbar.style.transform = 'translateY(0)';
-      }
-
-      lastScrollY = currentScrollY;
-    });
-
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('#mobileMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-
-    // Initialize Swiper
-    const swiper = new Swiper('.pengurus-swiper', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      loop: true,
-      spaceBetween: 30,
-      slidesPerView: 1,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        }
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
