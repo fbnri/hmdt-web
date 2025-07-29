@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HMDT - Himpunan Mahasiswa D3 Teknologi Telekomunikasi</title>
+  <link rel="icon" type="image/x-icon" href="img/logo-hmdt.png">
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --hmdt-orange: #b56d00;
@@ -38,8 +38,8 @@
         <div class="flex items-center gap-2">
           <img src="img/logo-hmdt.png" alt="Logo HMDT" class="w-12 h-12 rounded-full object-cover" />
           <div class="flex flex-col leading-tight">
-            <span class="text-xl font-bold text-[var(--hmdt-orange)]">HMDT</span>
-            <p class="text-sm text-gray-600 -mt-1">D3 Teknik Telekomunikasi</p>
+            <span class="text-xl font-bold text-[var(--hmdt-orange)]">Himpunan Mahasiswa</span>
+            <p class="text-sm text-gray-600 -mt-1">D3 Teknologi Telekomunikasi</p>
           </div>
         </div>
 
@@ -52,6 +52,10 @@
 
         <!-- Menu Desktop -->
         <nav class="hidden md:flex space-x-6 items-center">
+          <a href="#home" class="font-semibold relative group transition duration-200 text-gray-800 hover:text-[var(--hmdt-orange)]">
+            Home
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--hmdt-orange)] transition-all duration-300 group-hover:w-full"></span>
+          </a>
           <a href="#visi&misi" class="font-semibold relative group transition duration-200 text-gray-800 hover:text-[var(--hmdt-orange)]">
             Visi & Misi
             <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--hmdt-orange)] transition-all duration-300 group-hover:w-full"></span>
@@ -61,7 +65,11 @@
             <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--hmdt-orange)] transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a href="#pesan" class="font-semibold relative group transition duration-200 text-gray-800 hover:text-[var(--hmdt-orange)] ">
-            Kesan & Pesan
+            Form Aspirasi
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--hmdt-orange)] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#kontak" class="font-semibold relative group transition duration-200 text-gray-800 hover:text-[var(--hmdt-orange)] ">
+            Kontak
             <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--hmdt-orange)] transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
@@ -69,15 +77,17 @@
 
       <!-- Menu Mobile -->
       <div id="mobileMenu" class="transition-all duration-300 ease-in-out md:hidden hidden mt-4 flex flex-col gap-2">
+        <a href="#home" class="block py-2 px-4 rounded hover:bg-gray-100 text-gray-800 transition">Home</a>
         <a href="#visi&misi" class="block py-2 px-4 rounded hover:bg-gray-100 text-gray-800 transition">Visi & Misi</a>
         <a href="#pengurus" class="block py-2 px-4 rounded hover:bg-gray-100 text-gray-800 transition">Pengurus</a>
-        <a href="#pesan" class="block py-2 px-4 rounded hover:bg-gray-100 text-gray-800 transition">Kesan & Pesan</a>
+        <a href="#pesan" class="block py-2 px-4 rounded hover:bg-gray-100 text-gray-800 transition">Form Aspirasi</a>
+        <a href="#kontak" class="block py-2 px-4 rounded hover:bg-gray-100 text-gray-800 transition">Kontak</a>
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="relative bg-cover bg-center bg-no-repeat text-white text-center py-24" style="background-image: url(img/rektorat1.png);">
+  <section id="home" class="relative bg-cover bg-center bg-no-repeat text-white text-center py-24" style="background-image: url(img/rektorat1.png);">
     <div class="absolute inset-0 bg-black/70 z-0"></div>
     <div class="relative z-10 container mx-auto px-6">
       <div class="grid md:grid-cols-2 items-center gap-8">
@@ -85,10 +95,10 @@
         <!-- Teks -->
         <div class="text-left space-y-6">
           <h2 data-aos="fade-up" data-aos-delay="100" class="text-2xl md:text-4xl font-bold mb-16 leading-relaxed">
-            Selamat Datang di Himpunan Mahasiswa Diploma Teknik Telekomunikasi
+            Selamat Datang di Himpunan Mahasiswa Diploma Teknologi Telekomunikasi
           </h2>
           <p data-aos="fade-left" data-aos-delay="200" class="text-lg">
-            Himpunan Mahasiswa Diploma Teknik Telekomunikasi atau bisa disingkat HMDT, merupakan sebuah Himpunan yang berada di prodi Teknik Telekomunikasi yang berada di Fakultas Ilmu Terapan
+            Himpunan Mahasiswa Diploma Teknologi Telekomunikasi, yang dikenal HMDT, adalah sebuah organisasi yang bernaung di bawah program studi Teknologi Telekomunikasi di Fakultas Ilmu Terapan, Telkom University.
           </p>
         </div>
 
@@ -104,7 +114,7 @@
 
   <!-- Video Profile -->
   <section data-aos="zoom-in" class="py-16 px-4 md:px-20">
-    <h3 class="text-2xl font-bold text-center mb-8 text-[var(--hmdt-orange)]">Video Profile</h3>
+    <h3 class="text-2xl font-bold text-center mb-8 text-[var(--hmdt-orange)]">Tentang Kami</h3>
 
     <!-- Video Box -->
     <div class="max-w-3xl mx-auto mb-10 rounded-lg overflow-hidden shadow-lg">
@@ -114,7 +124,7 @@
       </div>
     </div>
     <p data-aos="fade-up" data-aos-delay="400" class="text-center max-w-2xl text-base leading-realaxed mx-auto">
-      HMDT adalah wadah pengembangan minat dan potensi mahasiswa D3 Teknologi Telekomunikasi. Kami bergerak dalam bidang akademik, sosial, dan teknologi dengan semangat kekeluargaan.
+      HMDT merupakan platform untuk pengembangan minat dan potensi mahasiswa D3 Teknologi Telekomunikasi. Kami berkomitmen untuk meningkatkan kesejahteraan mahasiswa D3TT dalam aspek akademik, sosial, dan teknologi, dengan mengedepankan semangat kekeluargaan.
     </p>
   </section>
 
@@ -127,7 +137,7 @@
       <div data-aos="fade-right" data-aos-delay="600" class="bg-white shadow rounded-lg p-6 border-l-4 border-[var(--hmdt-orange)] h-full flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
         <h4 class="text-xl font-semibold text-[var(--hmdt-orange)] mb-4">Visi</h4>
         <p class="text-gray-700 leading-relaxed">
-          Terwujud nya peran himpunan mahasiswa sebagai wadah aktualisasi dengan aspek tangkas dan adaptif,  dan  dilingkari dengan ber takwa terhadap tuhan, serta  menjadikan HMDT unggul guna memiliki reputasi yang baik di tingkat Fakultas maupun Universitas.
+          Terwujudnya peran Himpunan Mahasiswa sebagai wadah aktualisasi dengan aspek tangkas dan adaptif, serta dilandasi dengan ketakwaan terhadap Tuhan, menjadikan HMDT unggul dan memiliki reputasi yang baik di tingkat Fakultas maupun Universitas.
         </p>
       </div>
 
@@ -135,9 +145,9 @@
       <div data-aos="fade-left" data-aos-delay="700" class="bg-white shadow rounded-lg p-6 border-l-4 border-[var(--hmdt-orange)] h-full flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
         <h4 class="text-xl font-semibold text-[var(--hmdt-orange)] mb-4">Misi</h4>
         <ul class="list-disc pl-5 text-gray-700 space-y-2 leading-relaxed">
-          <li>mewadahi  civitas akademika untuk pengembangan potensi.</li>
-          <li>membentuk media komunikasi yang tangkas guna mengidentifikasi sebuah masalah.</li>
-          <li>menyelenggarakan program kerja yang unggul.</li>
+          <li>Mewadahi  civitas akademika untuk pengembangan potensi.</li>
+          <li>Membentuk media komunikasi yang tangkas guna mengidentifikasi sebuah masalah.</li>
+          <li>Menyelenggarakan program kerja yang unggul.</li>
           <li>Mewujudkan wadah aspirasi bagi Keluarga mahasiswa D3 Teknologi Telekomunikasi.</li>
         </ul>
       </div>
@@ -146,7 +156,7 @@
 
   <!-- Struktur Pengurus -->
   <section id="pengurus" data-aos="zoom-out" data-aos-delay="800" class="py-16 px-4 bg-gray-100">
-    <h3 class="text-2xl font-bold text-center mb-10 text-[var(--hmdt-orange)]">Struktur Pengurus</h3>
+    <h3 class="text-2xl font-bold text-center mb-10 text-[var(--hmdt-orange)]">BPH HMDT</h3>
 
     <div data-aos="zoom-in" data-aos-delay="800" class="swiper pengurus-swiper max-w-6xl mx-auto px-4 pb-12 relative">
       <div class="swiper-wrapper">
@@ -193,19 +203,19 @@
     <!-- Tombol Lihat Detail -->
     <div class="mt-6 text-center">
       <a href="detail-pengurus.html" class="inline-block bg-[var(--hmdt-orange)] text-white px-6 py-2 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-        Selengkapnya
+        Department
       </a>
     </div>
 
   </section>
 
 
-  <!-- Kesan & Pesan -->
+  <!-- Form Aspirasi -->
   <section id="pesan" data-aos="fade-up" data-aos-delay="600" class="py-16 px-4 md:px-20">
-    <h3 class="text-2xl font-bold text-center mb-8 text-[var(--hmdt-orange)]">Kesan & Pesan</h3>
+    <h3 class="text-2xl font-bold text-center mb-8 text-[var(--hmdt-orange)]">Form Aspirasi</h3>
     <form action="https://docs.google.com/forms/d/e/PASTE_LINK_KAMU/formResponse" method="POST" target="_blank" class="max-w-xl mx-auto space-y-4">
       <input type="text" name="entry.1234567890" required placeholder="Nama" class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[var(--hmdt-orange)]">
-      <textarea name="entry.0987654321" required placeholder="Pesan kamu..." rows="5" class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[var(--hmdt-orange)]"></textarea>
+      <textarea name="entry.0987654321" required placeholder="Aspirasi mahasiswa..." rows="5" class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[var(--hmdt-orange)]"></textarea>
       <button type="submit" class="bg-[var(--hmdt-orange)] text-white px-6 py-2 rounded hover:bg-opacity-90">Kirim</button>
     </form>
   </section>
@@ -219,17 +229,17 @@
         <img src="img/logo-hmdt.png" alt="Logo HMDT" class="w-20 h-20 object-cover rounded-full shadow border border-[var(--hmdt-orange)]" />
         <p class="text-sm text-gray-600 mt-1">Himpunan Mahasiswa D3 Teknologi Telekomunikasi</p>
         <div class="flex gap-3 mt-2">
-          <a href="https://x.com/infohmdt" target="_blank" class="bg-[var(--hmdt-orange)] hover:bg-orange-600 text-white w-10 h-10 flex items-center justify-center rounded-full transition-transform duration-300 hover:scale-110">
-            <i class="fa-brands fa-x-twitter text-sm"></i>
+          <a href="#" class="bg-[var(--hmdt-orange)] hover:bg-orange-600 text-white p-2 rounded-full transition-transform duration-300 hover:scale-110">
+            <i class="fab fa-twitter text-sm"></i>
           </a>
-          <a href="https://www.youtube.com/@hmdtuniversitastelkom3275" target="_blank" class="bg-[var(--hmdt-orange)] hover:bg-orange-600 text-white w-10 h-10 flex items-center justify-center rounded-full transition-transform duration-300 hover:scale-110">
-            <i class="fa-brands fa-youtube text-sm"></i>
+          <a href="#" class="bg-[var(--hmdt-orange)] hover:bg-orange-600 text-white p-2 rounded-full transition-transform duration-300 hover:scale-110">
+            <i class="fab fa-youtube text-sm"></i>
           </a>
-          <a href="https://www.instagram.com/infohmdt" target="_blank" class="bg-[var(--hmdt-orange)] hover:bg-orange-600 text-white w-10 h-10 flex items-center justify-center rounded-full transition-transform duration-300 hover:scale-110">
-            <i class="fa-brands fa-instagram text-sm"></i>
+          <a href="#" class="bg-[var(--hmdt-orange)] hover:bg-orange-600 text-white p-2 rounded-full transition-transform duration-300 hover:scale-110">
+            <i class="fab fa-instagram text-sm"></i>
           </a>
-          <a href="https://www.tiktok.com/@infohmdt_?_t=ZS-8yQhqrnx0zs&_r=1" target="_blank" class="bg-[var(--hmdt-orange)] hover:bg-orange-600 text-white w-10 h-10 flex items-center justify-center rounded-full transition-transform duration-300 hover:scale-110">
-            <i class="fa-brands fa-tiktok text-sm"></i>
+          <a href="#" class="bg-[var(--hmdt-orange)] hover:bg-orange-600 text-white p-2 rounded-full transition-transform duration-300 hover:scale-110">
+            <i class="fab fa-tiktok text-sm"></i>
           </a>
         </div>
       </div>
@@ -238,20 +248,20 @@
       <div class="hidden lg:block"></div>
 
       <!-- Contact Info -->
-      <div data-aos="zoom-in" class="text-center md:text-left">
-        <h4 class="text-lg font-bold mb-4 text-[var(--hmdt-orange)]">Contact Info</h4>
+      <div id="kontak" data-aos="zoom-in" class="text-center md:text-left">
+        <h4 class="text-lg font-bold mb-4 text-[var(--hmdt-orange)]">Kontak</h4>
         <ul class="space-y-2 text-sm">
           <li class="flex items-center justify-center md:justify-start gap-2">
-            <i class="fas fa-phone text-[var(--hmdt-orange)]"></i>
-            <span>081234567890 (Partnership)</span>
+            <i class="fa-brands fa-whatsapp text-[var(--hmdt-orange)]"></i>
+            <span>+6282125908508 (Eksternal)</span>
           </li>
           <li class="flex items-center justify-center md:justify-start gap-2">
-            <i class="fas fa-comments text-[var(--hmdt-orange)]"></i>
-            <span>081234567890 (Organization & NGO)</span>
+            <i class="fa-brands fa-whatsapp text-[var(--hmdt-orange)]"></i>
+            <span>+6282217324307 (Media Partner)</span>
           </li>
           <li class="flex items-center justify-center md:justify-start gap-2">
-            <i class="fas fa-envelope text-[var(--hmdt-orange)]"></i>
-            <span>hmdt@gmail.com</span>
+            <i class="fa-solid fa-envelope text-[var(--hmdt-orange)]"></i>
+            <span>hmdt.telu@gmail.com</span>
           </li>
         </ul>
       </div>
