@@ -47,6 +47,18 @@
       });
     });
 
+    // Toggle dropdown departemen di mobile
+    const mobileDepartemenBtn = document.getElementById('mobileDepartemenBtn');
+    const mobileDepartemenMenu = document.getElementById('mobileDepartemenMenu');
+
+    if (mobileDepartemenBtn && mobileDepartemenMenu) {
+      mobileDepartemenBtn.addEventListener('click', () => {
+        mobileDepartemenMenu.classList.toggle('hidden');
+        mobileDepartemenBtn.querySelector('i').classList.toggle('fa-chevron-down');
+        mobileDepartemenBtn.querySelector('i').classList.toggle('fa-chevron-up');
+      });
+    }
+
     // Initialize Swiper
     const swiper = new Swiper('.pengurus-swiper', {
       navigation: {
