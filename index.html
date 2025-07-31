@@ -355,25 +355,24 @@
             </div>
           </div>
           
-          <div class="p-8">
-            <h3 class="text-2xl font-bold mb-6 text-center md:text-left">Form Aspirasi</h3>
-            <form action="#" method="POST" class="space-y-5">
-              <div>
-                <label class="block text-gray-700 mb-2 font-medium" for="name">Nama Lengkap</label>
-                <input type="text" id="name" name="name" required class="form-input" placeholder="Masukkan nama lengkap">
-              </div>
-              <div>
-                <label class="block text-gray-700 mb-2 font-medium" for="email">Email</label>
-                <input type="email" id="email" name="email" required class="form-input" placeholder="Masukkan email">
-              </div>
-              <div>
-                <label class="block text-gray-700 mb-2 font-medium" for="aspiration">Aspirasi Anda</label>
-                <textarea id="aspiration" name="aspiration" rows="5" required class="form-input" placeholder="Tulis aspirasi atau saran Anda"></textarea>
-              </div>
-              <button type="submit" class="btn-primary w-full py-3">
-                Kirim Aspirasi
-              </button>
-            </form>
+          <div class="p-8 flex flex-col items-center justify-center">
+            <h3 class="text-2xl font-bold mb-6 text-center">Form Aspirasi</h3>
+            <p class="text-gray-600 mb-8 text-center max-w-md">
+              Klik tombol di bawah untuk mengirimkan aspirasi Anda melalui Google Form
+            </p>
+            
+            <!-- Tombol Google Form -->
+            <a href="https://forms.gle/E4E9C7PeR5Jy6Qta9" 
+              target="_blank"
+              class="btn-primary px-8 py-4 text-lg font-bold flex items-center justify-center gap-3 transition-transform hover:scale-105">
+              <i class="fab fa-google text-xl"></i>
+              Kirim Aspirasi via Google Form
+            </a>
+            
+            <p class="mt-6 text-gray-500 text-sm text-center">
+              <i class="fas fa-external-link-alt mr-2"></i>
+              Anda akan diarahkan ke halaman eksternal
+            </p>
           </div>
         </div>
       </div>
